@@ -13,10 +13,7 @@
       "role": "Developer"
     }
   ],
-  "repositories":[
-    {
-      "type": "vcs",
-      "url" : "git@github.com:anhredweb/redshop-base.git"
-    }
-  ]
+  "require": {
+    "php": "^7.0"
+  }
 }
