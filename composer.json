@@ -1,0 +1,22 @@
+{
+  "name": "anhredweb/redshop-base",
+  "type": "library",
+  "description": "The core / based of redSHOP, purely coded by PHP and not depends on any framework",
+  "keywords": ["redshop", "redcomponent"],
+  "homepage": "https://redweb.dk",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Anh Nguyen Hoang",
+      "email": "anh@redweb.dk",
+      "homepage": "https://redweb.dk",
+      "role": "Developer"
+    }
+  ],
+  "repositories":[
+    {
+      "type": "vcs",
+      "url" : "git@github.com:anhredweb/redshop-base.git"
+    }
+  ]
+}
