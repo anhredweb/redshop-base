@@ -1,5 +1,5 @@
 <?php
-namespace Helper;
+namespace RedshopBase\Helper;
 
 /**
  * Class JsonHelper
@@ -20,7 +20,7 @@ class JsonHelper{
 
         $filePath = 'Syntax/' . $target . '.json';
 
-        if(!file_exists($filePath))
+        if (!file_exists($filePath))
         {
             throw new \ErrorException("Couldnt found JSON of " . $target);
         }

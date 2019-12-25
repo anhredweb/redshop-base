@@ -1,5 +1,5 @@
 <?php
-namespace redObject;
+namespace RedshopBase\RedObject;
 
 use AbstractClass\UserBase;
 use Helper\JsonHelper;
