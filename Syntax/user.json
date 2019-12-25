@@ -1,0 +1,38 @@
+{
+  "userID": {
+    "type": "int",
+    "min": 0,
+    "default": 0,
+    "required": true
+  },
+  "userName": {
+    "type": "text",
+    "default": "",
+    "required": true
+  },
+  "firstName": {
+    "type": "text",
+    "default": "",
+    "required": true
+  },
+  "middleName": {
+    "type": "text",
+    "default": "",
+    "required": false
+  },
+  "lastName": {
+    "type": "text",
+    "default": "",
+    "required": true
+  },
+  "email": {
+    "type": "email",
+    "default": "",
+    "required": true
+  },
+  "activate": {
+    "type": "bool",
+    "default": "",
+    "required": true
+  }
+}
