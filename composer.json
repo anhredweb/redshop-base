@@ -14,7 +14,7 @@
   },
   "autoload": {
     "psr-4": {
-      "RedshopBase": "src/"
+      "RedshopBase\\": "src/"
     }
   },
   "autoload-dev": {
