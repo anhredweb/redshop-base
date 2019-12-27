@@ -1,0 +1,7 @@
+DirectoryIndex index.html index.htm
+Options +Indexes
+
+# Prevent direct access to certain files
+<FilesMatch ^(*\.json$)$>
+    Deny from all
+</FilesMatch>
