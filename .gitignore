@@ -1,5 +1,7 @@
 vendor/
 vendor/**
+node-modules/
+node-module/**
 README.md
 composer-lock.json
 ./Helper/Database/dbhelper-config.json
