@@ -30,4 +30,21 @@ class JsonHelper{
 
         return $jsonArray;
     }
+
+    public static function parse($target)
+    {
+        if (!$target)
+        {
+            return null;
+        }
+
+        if (!fileExists($target))
+        {
+            return null;
+        }
+
+        $str = file_get_contents($target);
+
+        return $str;
+    }
 }

@@ -26,7 +26,7 @@ final class DBHelper
             // TODO: get config from file config.
 
             try {
-                JsonHelper::parse('dbhelper-config.json');
+                JsonHelper::parse(__DIR__ . '/dbhelper-config.json');
             }
             catch (FileExistsException $e)
             {
