@@ -1,8 +1,9 @@
 <?php
 namespace RedshopBase\RedObject;
 
-use AbstractClass\UserBase;
-use Helper\JsonHelper;
+use RedshopBase\AbstractClass\UserBase;
+use RedshopBase\Helper\JsonHelper;
+use RedshopBase\API\RedshopAPIHelper;
 
 /**
  * Class User
@@ -26,13 +27,16 @@ final class User extends UserBase
      * @param null $param
      * @return mixed
      */
-    public function getUser($param = null){
-        if (self::$singleTonUser !== null)
+    public function getUser($param = null)
+    {
+        if (self::$singleTonUser === null)
         {
-            return self::$singleTonUser;
+            self::initUserObject();
         }
 
-        return self::initUserObject();
+        //RedshopAPIHelper::read(self::$singleTonUser);
+
+        echo json_encode(self::$singleTonUser);
     }
 
     /**
@@ -49,7 +53,5 @@ final class User extends UserBase
         }
 
         self::$singleTonUser = $user;
-
-        return self::$singleTonUser;
     }
 }

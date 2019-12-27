@@ -2,3 +2,4 @@ vendor/
 vendor/**
 README.md
 composer-lock.json
+./Helper/Database/dbhelper-config.json

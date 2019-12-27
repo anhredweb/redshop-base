@@ -3,16 +3,16 @@ namespace RedshopBase\API;
 
 use RedshopBase\Helper\JsonHelper;
 
-class ReadHelper
+class RedshopAPIHelper
 {
-    public static function read()
+    public static function read($target)
     {
-        $jsonUser = JsonHelper::getJson('user');
+        $json = json_encode($target);
 
         self::prepareHTMLHeader();
 
         http_response_code(200);
-        echo jsonUser;
+        echo $json;
     }
 
     private static function prepareHTMLHeader()
