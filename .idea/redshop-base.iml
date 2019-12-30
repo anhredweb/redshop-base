@@ -40,5 +40,6 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="redshop-joomla" />
+    <orderEntry type="module" module-name="test-redshop-base" />
   </component>
 </module>

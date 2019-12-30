@@ -45,7 +45,7 @@ final class DBHelper
         return self::$dbConfig;
     }
 
-    private function getDBConn()
+    public function getDBConn()
     {
     	if (self::$dbConfig === null)
 	    {

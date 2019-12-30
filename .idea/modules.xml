@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/redshop-base.iml" filepath="$PROJECT_DIR$/.idea/redshop-base.iml" />
       <module fileurl="file://$PROJECT_DIR$/../redshop-joomla/.idea/redshop-joomla.iml" filepath="$PROJECT_DIR$/../redshop-joomla/.idea/redshop-joomla.iml" />
+      <module fileurl="file://$USER_HOME$/Sites/test/.idea/test-redshop-base.iml" filepath="$USER_HOME$/Sites/test/.idea/test-redshop-base.iml" />
     </modules>
   </component>
 </project>

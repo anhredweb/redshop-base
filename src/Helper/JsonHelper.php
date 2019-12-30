@@ -13,22 +13,21 @@ class JsonHelper{
      */
     public static function parseSyntaxJson($target)
     {
-        if(!$target)
-        {
-            return array();
-        }
+	    if(!$target)
+	    {
+		    return array();
+	    }
 
-        $filePath = 'Syntax/' . $target . '.json';
+	    $filePath = __DIR__ . '/../Syntax/' . $target . '.json';
 
-        if (!file_exists($filePath))
-        {
-            throw new \ErrorException("Couldnt found JSON of " . $target);
-        }
+	    if (!file_exists($filePath))
+	    {
+		    return null;
+	    }
 
-        $str = file_get_contents($filePath);
-        $jsonArray = json_decode($str, true);
+	    $str = file_get_contents($filePath);
 
-        return $jsonArray;
+	    return $str;
     }
 
     public static function parse($target)
@@ -38,7 +37,7 @@ class JsonHelper{
             return null;
         }
 
-        if (!fileExists($target))
+        if (!file_exists($target))
         {
             return null;
         }
