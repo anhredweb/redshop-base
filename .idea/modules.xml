@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/redshop-base.iml" filepath="$PROJECT_DIR$/.idea/redshop-base.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../redshop-joomla/.idea/redshop-joomla.iml" filepath="$PROJECT_DIR$/../redshop-joomla/.idea/redshop-joomla.iml" />
     </modules>
   </component>
 </project>

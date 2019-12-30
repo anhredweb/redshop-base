@@ -1,7 +1,11 @@
-vendor/
-vendor/**
+# Composer
+composer.lock
+
 node-modules/
 node-module/**
 README.md
-composer-lock.json
+
 ./Helper/Database/dbhelper-config.json
+.idea/**
+.idea/*
+.idea/workspace.xml
