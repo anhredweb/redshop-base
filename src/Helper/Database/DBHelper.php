@@ -55,9 +55,9 @@ final class DBHelper
     	$config = self::$dbConfig;
 
     	$conn = new \mysqli(
-    		$config['connectionInfo']['host'],
-		    $config['connectionInfo']['user'],
-		    $config['connectionInfo']['password']
+    		$config->connectionInfo->host,
+		    $config->connectionInfo->user,
+		    $config->connectionInfo->password
 	    );
 
     	if ($conn->connect_error)

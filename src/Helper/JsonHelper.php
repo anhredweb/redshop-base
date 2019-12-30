@@ -27,7 +27,7 @@ class JsonHelper{
 
 	    $str = file_get_contents($filePath);
 
-	    return $str;
+	    return json_decode($str);
     }
 
     public static function parse($target)
@@ -44,6 +44,6 @@ class JsonHelper{
 
         $str = file_get_contents($target);
 
-        return $str;
+        return json_decode($str);
     }
 }
