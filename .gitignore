@@ -44,6 +44,12 @@ vendor/*
 tests/vendor/*
 **/vendor/*
 
+# Node
+
+node_modules/*
+tests/node_modules/*
+**/node_modules/*
+
 # Bower
 bower_components/
 
