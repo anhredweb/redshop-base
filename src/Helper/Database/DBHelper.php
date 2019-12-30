@@ -9,13 +9,24 @@ final class DBHelper
 {
     static private $dbConfig;
 
+    static private $dbo;
+
     private function __construct()
     {
         // Prevent using new obj
     }
 
-    public function getDbo()
+    public static function getDbo()
     {
+		if (self::$dbo !== null)
+		{
+			return self::$dbo;
+		}
+
+		self::$dbo = new \stdClass();
+
+		self::$dbo->dbConfig = self::initConfig();
+
 
     }
 
