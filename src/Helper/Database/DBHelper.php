@@ -47,6 +47,13 @@ final class DBHelper
 
     public function getDBConn()
     {
+    	self::$dbConn = self::getConnByDBType();
+
+    	return self::$dbConn;
+    }
+
+    private function getConnByDBType()
+    {
     	if (self::$dbConfig === null)
 	    {
 	    	self::initConfig();
@@ -54,19 +61,21 @@ final class DBHelper
 
     	$config = self::$dbConfig;
 
-    	$conn = new \mysqli(
-    		$config->connectionInfo->host,
-		    $config->connectionInfo->user,
-		    $config->connectionInfo->password
-	    );
-
-    	if ($conn->connect_error)
+    	switch ($config->dbType)
 	    {
-	    	throw new \ErrorException('Coundn\'t connect to Database');
+		    case 'mysql':
+		    case 'mysqli':
+		    default:
+				$conn = \RedshopBase\Helper\Database\MysqlHelper::getConn($config);
+
+			    if ($conn->connect_error)
+			    {
+				    throw new \ErrorException('Coundn\'t connect to Database');
+			    }
+
+		    	break;
 	    }
 
-	    self::$dbConn = $conn;
-
-    	return self::$dbConn;
+	    return $conn;
     }
 }
