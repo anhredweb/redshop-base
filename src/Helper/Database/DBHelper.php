@@ -60,11 +60,12 @@ final class DBHelper
 		    $config->connectionInfo->password
 	    );
 
-    	
     	if ($conn->connect_error)
 	    {
 	    	throw new \ErrorException('Coundn\'t connect to Database');
 	    }
+
+	    self::$dbConn = $conn;
 
     	return self::$dbConn;
     }
