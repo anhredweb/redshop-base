@@ -2,12 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0a7e7b52-8943-4515-a760-16c3e63ae83c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/redshop-base.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/redshop-base.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Helper/Database/DBHelper.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Helper/Database/DBHelper.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Helper/Database/dbhelper-config.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/Helper/Database/dbhelper-config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Syntax/user.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/Syntax/user.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redObject/Sys/Dbo.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/redObject/Sys/Dbo.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redObject/Sys/Setup.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/redObject/Sys/Setup.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +98,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1577672568908</updated>
-      <workItem from="1577672570276" duration="5977000" />
+      <workItem from="1577672570276" duration="11290000" />
     </task>
     <servers />
   </component>

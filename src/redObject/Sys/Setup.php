@@ -11,6 +11,12 @@ final class Setup extends SetupBase
 
 	public static function Fix($key, $param)
 	{
+
+	}
+
+	public static function Setup($key, $param)
+	{
+		return self::Fix($key, $param);
 	}
 
 	private static function CheckDB()

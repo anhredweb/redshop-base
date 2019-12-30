@@ -6,7 +6,7 @@ use RedshopBase\AbstractCLass\Sys\DboBase;
 
 class Dbo extends DboBase
 {
-	private $dbConfig;
+	public $dbConfig;
 
 	public function get($key, $param){
 	}
@@ -18,5 +18,13 @@ class Dbo extends DboBase
 	}
 
 	private function setItem(){
+	}
+
+	private function getCollection($key, $param)
+	{
+	}
+
+	private function setCollection($key, $param)
+	{
 	}
 }
