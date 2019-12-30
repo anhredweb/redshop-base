@@ -1,39 +1,81 @@
 <?php
 namespace RedshopBase\Helper\Database;
 
-use foo\bar\Exception;
-use Joomla\Component\Media\Administrator\Exception\FileExistsException;
 use RedshopBase\Helper\JsonHelper;
+use RedshopBase\RedObject\Sys\Dbo;
 
 final class DBHelper
 {
     static private $dbConfig;
+
+    static private $dbConn;
+
+    static private $dbo;
 
     private function __construct()
     {
         // Prevent using new obj
     }
 
-    public function getDbo()
+    public static function getDbo()
     {
+		if (self::$dbo !== null)
+		{
+			return self::$dbo;
+		}
 
+		self::$dbo = new Dbo();
+
+		self::$dbo->dbConfig = self::initConfig();
     }
 
     private function initConfig()
     {
         if (self::$dbConfig === null)
         {
-            // TODO: get config from file config.
-
             try {
-                JsonHelper::parse(__DIR__ . '/dbhelper-config.json');
+                self::$dbConfig = JsonHelper::parse(__DIR__ . '/dbhelper-config.json');
             }
-            catch (FileExistsException $e)
+            catch (Exception $e)
             {
-                throw $e;
+                throw new \ErrorException('Coudn\'t found dbhelper-config.json');
             }
         }
 
         return self::$dbConfig;
+    }
+
+    public function getDBConn()
+    {
+    	self::$dbConn = self::getConnByDBType();
+
+    	return self::$dbConn;
+    }
+
+    private function getConnByDBType()
+    {
+    	if (self::$dbConfig === null)
+	    {
+	    	self::initConfig();
+	    }
+
+    	$config = self::$dbConfig;
+
+    	switch ($config->dbType)
+	    {
+		    case 'mysql':
+		    case 'mysqli':
+		    default:
+				$conn = \RedshopBase\Helper\Database\MysqlHelper::getConn($config);
+
+			    if ($conn->connect_error)
+			    {
+				    throw new \ErrorException('Coundn\'t connect to Database');
+			    }
+
+		    	break;
+	    }
+
+	    return $conn;
     }
 }
