@@ -43,6 +43,7 @@ class JsonHelper{
         }
 
         $str = file_get_contents($target);
+        
 
         return json_decode($str);
     }
