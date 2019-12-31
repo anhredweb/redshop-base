@@ -1,10 +1,6 @@
 <?php
 namespace RedshopBase\Helper\Database;
 
-<<<<<<< HEAD
-use foo\bar\Exception;
-=======
->>>>>>> origin/develop
 use RedshopBase\Helper\JsonHelper;
 use RedshopBase\RedObject\Sys\Dbo;
 
@@ -42,11 +38,7 @@ final class DBHelper
             }
             catch (Exception $e)
             {
-<<<<<<< HEAD
                 throw new \ErrorException('Couldn\'t load DB config');
-=======
-                throw new \ErrorException('Coudn\'t found dbhelper-config.json');
->>>>>>> origin/develop
             }
         }
 
