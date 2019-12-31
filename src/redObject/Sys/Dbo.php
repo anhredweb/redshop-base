@@ -3,6 +3,7 @@
 namespace RedshopBase\RedObject\Sys;
 
 use RedshopBase\AbstractCLass\Sys\DboBase;
+use RedshopBase\Workflow;
 
 class Dbo extends DboBase
 {
@@ -26,5 +27,8 @@ class Dbo extends DboBase
 
 	private function setCollection($key, $param)
 	{
+	    $res = Workflow\CreateCollection::apply($key, $param);
+
+	    return $res;
 	}
 }
