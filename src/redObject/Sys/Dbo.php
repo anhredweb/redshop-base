@@ -3,32 +3,24 @@
 namespace RedshopBase\RedObject\Sys;
 
 use RedshopBase\AbstractCLass\Sys\DboBase;
+use RedshopBase\Helper\JsonHelper;
 use RedshopBase\Workflow;
 
 class Dbo extends DboBase
 {
-	public $dbConfig;
+    public $dbConfig;
 
-	public function get($key, $param){
-	}
+    public function query($key, $param)
+    {
+        $param = $this->mappingParams($param);
 
-	public function set($key, $param){
-	}
+        $res = call_user_func_array('\\Workflow\\' . $key . '::apply', [$key, $param]);
 
-	private function getItem(){
-	}
+        return $res;
+    }
 
-	private function setItem(){
-	}
-
-	private function getCollection($key, $param)
-	{
-	}
-
-	private function setCollection($key, $param)
-	{
-	    $res = Workflow\CreateCollection::apply($key, $param);
-
-	    return $res;
-	}
+    private function mappingParams($param)
+    {
+        return JsonHelper::parseSyntaxJson('user');
+    }
 }

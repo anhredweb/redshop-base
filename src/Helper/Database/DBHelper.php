@@ -27,6 +27,8 @@ final class DBHelper
 		self::$dbo = new Dbo();
 
 		self::$dbo->dbConfig = self::initConfig();
+
+		return self::$dbo;
     }
 
     private function initConfig()
