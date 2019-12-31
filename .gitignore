@@ -2,6 +2,7 @@ vendor/
 vendor/**
 node-modules/
 node-module/**
+DS_STORE
 README.md
 composer-lock.json
 ./Helper/Database/dbhelper-config.json

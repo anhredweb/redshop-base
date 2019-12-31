@@ -2,7 +2,6 @@
 namespace RedshopBase\Helper\Database;
 
 use foo\bar\Exception;
-use Joomla\Component\Media\Administrator\Exception\FileExistsException;
 use RedshopBase\Helper\JsonHelper;
 
 final class DBHelper
@@ -26,11 +25,11 @@ final class DBHelper
             // TODO: get config from file config.
 
             try {
-                JsonHelper::parse(__DIR__ . '/dbhelper-config.json');
+                self::$dbConfig = JsonHelper::parse(__DIR__ . '/dbhelper-config.json');
             }
-            catch (FileExistsException $e)
+            catch (Exception $e)
             {
-                throw $e;
+                throw new \ErrorException('Couldn\'t load DB config');
             }
         }
 
