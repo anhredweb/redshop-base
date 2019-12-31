@@ -1,7 +1,7 @@
 {
-  "db_type": "mysql",
-  "return_type": "json",
-  "connection_info": {
+  "dbType": "mysql",
+  "returnType": "json",
+  "connectionInfo": {
     "host" : "127.0.0.1",
     "user" : "root",
     "password" : "@Abc123!",
