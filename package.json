@@ -6,6 +6,6 @@
   "dependencies": {
     "gulp": "4.0.2",
     "gulp-copy": "^4.0.1",
-    "node-sass": "^4.13.0"
+    "node-sass": "^7.0.0"
   }
 }
